@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Oswald:wght@300&family=Rokkitt:wght@100&family=Rubik+Dirt&family=Rubik+Maze&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Maze&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --varcolor: rgba(93, 220, 105, 0.849);
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      img {
+        height: 124px;
+        width: 124px;
+      }
+
+      @keyframes line {
+        0% {
+          border-bottom: 5px solid var(--varcolor);
+          padding-bottom: 100px;
+        }
+
+        50% {
+          border-bottom: 2.5px solid var(--varcolor);
+        }
+
+        100% {
+          border-bottom: 1.25px solid var(--varcolor);
+        }
+      }
+
+      div.red {
+        z-index: 0;
+        text-shadow: 8px 7px 5.5px rgb(42, 57, 42);
+        animation-name: zoomIn;
+        animation-duration: 1.5s;
+        color: var(--varcolor);
+        font-size: 4.2rem;
+        margin-top: 230px;
+      }
+
+      div.rt {
+        display: flex;
+        margin-top: 40px;
+      }
+
+      #home {
+        font-family: "Rubik Dirt", cursive;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+      }
+
+      #home::before {
+        content: "";
+        position: absolute;
+        background: url("https://img5.goodfon.com/wallpaper/nbig/8/70/iabloki-sparzha-ogurtsy-kivi-ovoshchi-frukty-zelenye-temnyi.jpg")
+          no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.8;
+      }
+
+      div a.button {
+        color: var(--varcolor);
+        border-radius: 24px;
+        font-size: 22px;
+        padding: 8px 8px;
+        animation-name: zoomIn;
+        animation-duration: 1.5s;
+        border: 2.5px solid var(--varcolor);
+        font-family: "Rubik Dirt", cursive;
+        background-color: transparent;
+        text-decoration: none;
+        text-shadow: 3px 4px 2.5px rgb(42 57 42);
+      }
+
+      div a.button:hover {
+        transition: 0.4s;
+        opacity: 0.8;
+        box-shadow: 6px 3.5px 7.5px rgb(42 57 42);
+      }
+
+      .nav-2 {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        div.red {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.9rem;
+        }
+
+        img {
+          display: none;
+        }
+        #navbar {
+          display: none;
+        }
+        #navbar ul.l1 {
+          display: none;
+        }
+
+        .nav-2 {
+          justify-content: space-between;
+          display: flex;
+          width: 100%;
+          background-color: hsla(100, 0%, 20%, 0.38);
+          box-shadow: 1px 8px 30px hsl(0deg 0% 0% / 98%);
+          border-radius: 26px;
+          height: 13vh;
+          position: fixed;
+          z-index: 1;
+        }
+
+        .main {
+          color: white;
+          padding: 22px 15px;
+          text-shadow: 8px 7px 5.5px rgb(42, 57, 42);
+          font-family: "Rubik Dirt", cursive;
+          font-size: 3.4rem;
+        }
+
+        #main {
+          cursor: pointer;
+          z-index: 1;
+          padding: 29px 21px;
+        }
+
+        .a {
+          width: 44px;
+          height: 5px;
+          margin: 5px 2px;
+          background-color: greenyellow;
+          transition: 0.65s all;
+        }
+
+        .subnav {
+          border-radius: 23px;
+          background-color: hsla(100, 0%, 20%, 0.38);
+          height: 96vh;
+          width: 47.5vw;
+          position: absolute;
+          box-shadow: 1px 8px 30px hsl(0deg 0% 0% / 98%);
+          transition: transform 0.2s ease-in;
+          transform: translate(100%);
+          top: -6px;
+          left: 47%;
+          right: 50%;
+        }
+        .subnav li {
+          list-style: none;
+
+          font-family: "Rubik Dirt", cursive;
+          font-size: 1.5rem;
+          margin: 55px 10px;
+        }
+        .subnav li a {
+          cursor: pointer;
+          color: white;
+          text-decoration: none;
+          text-shadow: 3px 5px 6.5px rgb(4 3 3);
+        }
+        .subnav li .fa-angle-up:hover {
+          cursor: pointer;
+          font-weight: bolder;
+
+          color: rgba(93, 220, 105, 0.849);
+          text-shadow: 2px 2px 2.5px rgb(42, 57, 42);
+        }
+
+        .dropdown li a {
+          cursor: pointer;
+          font-weight: bolder;
+
+          color: rgba(93, 220, 105, 0.849);
+          text-shadow: 2px 2px 2.5px rgb(42, 57, 42);
+        }
+
+        .tr1 {
+          transform: rotate(180deg);
+        }
+        .dropdown {
+          display: none;
+        }
+        .drp1 {
+          display: block;
+          transition: height ease 0.5s;
+        }
+        .dropdown li a {
+          text-decoration: none;
+        }
+
+        .open1 {
+          transform: translate(0%);
+        }
+
+        .open .a {
+          margin-top: 8px;
+          background-image: linear-gradient(
+            to right,
+            rgba(255, 0, 0, 0),
+            green
+          );
+        }
+
+        .open .one {
+          transform: rotate(45deg);
+        }
+
+        .open .two {
+          display: none;
+        }
+
+        .open .three {
+          translate: 0px -15.56px;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .drop-menu1 {
+        display: flex;
+      }
+
+      #navbar {
+        align-items: center;
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: hsla(100, 0%, 20%, 0.38);
+        box-shadow: 1px 8px 30px hsl(0deg 0% 0% / 98%);
+        border-radius: 26px;
+      }
+
+      #navbar ul {
+        display: flex;
+      }
+
+      #navbar li {
+        list-style: none;
+      }
+
+      li a.a1:hover {
+        text-shadow: 4px 4px 2.5px rgb(42, 57, 42);
+        animation-name: line;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        border-bottom: 1px solid var(--varcolor);
+      }
+      .i1 {
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+
+      #navbar li a.a1 {
+        color: var(--varcolor);
+        font-family: "Rubik Dirt", cursive;
+        font-size: 1.42rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      li.item {
+        margin: 0px 33px;
+      }
+
+      #special {
+        margin-left: -40px;
+      }
+
+      ul.drop-link ul {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 105px;
+        height: 220px;
+        border: 2px solid rgb(149, 201, 80);
+        background-color: rgb(69 88 65 / 31%);
+        box-shadow: 6px 3.5px 5px rgb(42 57 42);
+        border-radius: 6px;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      nav ul li#a2:hover > ul {
+        opacity: 1;
+        transition: 1s linear;
+        visibility: visible;
+      }
+
+      .drop-menu li {
+        margin: 11.5px -29px;
+      }
+
+      .drop-menu li a {
+        color: var(--varcolor);
+        font-family: "Rubik Dirt", cursive;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      ul.drop-menu {
+        display: flex;
+      }
+
+      ul.drop-menu a:hover {
+        text-shadow: 4px 4px 2.5px rgb(42, 57, 42);
+      }
+
+      div.green {
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div id="im">
+        <img
+          src="https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/59eb00b1-2e19-4912-bf2e-0c7a1f71f8b1.png"
+          alt=""
+          id="img1"
+        />
+      </div>
+      <ul class="l1">
+        <li class="item">
+          <a href="/" class="a1"> Home </a>
+        </li>
+        <li>
+          <ul class="drop-link">
+            <li class="item" id="a2">
+              <a class="a1" id="special"> Stores </a>
+              <ul class="drop-menu">
+                <li>
+                  <a href="#">Delhi-NCR</a>
+                </li>
+                <li><a href="#">Banglore</a></li>
+                <li><a href="#">Kolkata</a></li>
+                <li><a href="#">Mumbai</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="/contact" class="a1">Contact</a>
+        </li>
+      </ul>
+      <div class="input-group rounded">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+    </nav>
+    <nav class="nav-2">
+      <div class="main">Sprouts</div>
+      <div id="main">
+        <div class="a one"></div>
+        <div class="a two"></div>
+        <div class="a three"></div>
+      </div>
+
+      <ul class="subnav">
+        <li>
+          <a href="/"> Home </a>
+        </li>
+        <li>
+          <a class="drp"> Stores </a><i class="fa fa-angle-up"></i>
+          <ul class="dropdown">
+            <li>
+              <a href="#">Delhi-NCR</a>
+            </li>
+            <li><a href="#">Banglore</a></li>
+            <li><a href="#">Kolkata</a></li>
+            <li><a href="#">Mumbai</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="red">
+        Still Waiting...<br />
+        Right place to buy Fresh Vegan!
+      </div>
+      <div class="rt">
+        <a href="/services" class="button"> Order Now... </a>
+      </div>
+    </section>
+    <script>
+      const btn = document.querySelector("#main");
+      const btn2 = document.querySelector(".fa-angle-up");
+      const btn1 = document.querySelector(".subnav");
+      const btn3 = document.querySelector(".dropdown");
+      const btn4 = document.querySelector(".drp1");
+
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        btn1.classList.toggle("open1");
+      });
+      btn2.addEventListener("click", () => {
+        btn2.classList.toggle("tr1");
+        btn2.style.transition = "0.78s all";
+
+        btn3.classList.toggle("drp1");
+      });
+    </script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+</html>
