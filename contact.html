@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+    <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Oswald:wght@300&family=Rokkitt:wght@100&family=Rubik+Dirt&family=Rubik+Maze&display=swap"
         rel="stylesheet">
 
@@ -14,6 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Maze&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <style>
         :root {
             --varcolor: rgba(93, 220, 105, 0.849);
@@ -165,8 +177,8 @@
             display: flex;
             position: absolute;
             flex-direction: column;
-            width: 105px;
-            height: 220px;
+            width: 152px;
+            
             border: 2px solid rgb(149, 201, 80);
             background-color: rgb(69 88 65 / 31%);
             box-shadow: 6px 3.5px 5px rgb(42 57 42);
@@ -208,106 +220,6 @@
 
 
 
-      
-
-        .boxes {
-            z-index: 0;
-            height: 481px;
-            width: 375px;
-            box-shadow: 3px 3px 7px black;
-            border-radius: 24px;
-
-        }
-
-        .boxes:hover {
-            animation-name: heartbeat;
-            animation-duration: 1s;
-            animation-iteration-count: 1;
-            margin: top -6px;
-            box-shadow: 15px 15px 35px rgb(43, 80, 43);
-
-        }
-
-        #pr1,
-        #pr2,
-        #pr3,
-        #pr4,
-        #pr5,
-        #pr6 {
-            color: green;
-            font-family: 'Rubik Dirt', cursive;
-            font-size: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @keyframes heartbeat {
-            0% {
-                box-shadow: 6px 6px 14px rgb(43, 80, 43);
-            }
-
-            100% {
-                margin: top -6px;
-                box-shadow: 15px 15px 35px rgb(43, 80, 43);
-            }
-        }
-
-        .bt {
-            display: flex;
-            flex-direction: row;
-            margin-top: 109px;
-        }
-
-        .button-1 {
-            margin-left: 18px;
-        }
-
-        .button-2 {
-            margin-left: 93px;
-        }
-
-        #tomato {
-            height: 263px;
-            width: 280px;
-            margin-top: 08px;
-            margin-left: 40px;
-        }
-
-
-        .button-2 a {
-            text-decoration: none;
-            background-color: red;
-            border-radius: 10px;
-            font-size: 22px;
-            opacity: 0.785;
-            width: 50px;
-            padding: 10px 15px;
-            color: white;
-        }
-
-        .button-1 a {
-            text-decoration: none;
-            background-color: blue;
-            opacity: 0.785;
-            border-radius: 10px;
-            font-size: 22px;
-            height: 50px;
-            width: 30px;
-            padding: 10px 15px;
-            color: white;
-        }
-
-        .button-1 a:hover {
-            opacity: 1;
-            transition: 1s linear;
-        }
-
-        .button-2 a:hover {
-            opacity: 1;
-            transition: 1s linear;
-        }
-
         div.img {
             margin-left: 120px;
             margin-top: 85px;
@@ -323,7 +235,7 @@
         #contact {
             background-color: var(--varcolor);
             color: white;
-
+            right: 0;
 
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
@@ -415,6 +327,12 @@
         }
 
         @media only screen and (max-width: 768px) {
+            .input-group > .form-control {
+          margin-top: 85px;
+        }
+        .input-group-text {
+          margin-top: 85px;
+        }
             div.red {
                 display: flex;
                 align-items: center;
@@ -510,7 +428,7 @@
             transition: transform 0.2s ease-in;
             transform: translate(100%);
             top: -6px;
-            left: 57%;
+            left: 61%;
             right: 50%;
         }
 
@@ -605,7 +523,7 @@
         }
 
 
-        textarea::placeholder {
+        #details::placeholder,textarea::placeholder {
             color: var(--varcolor);
             opacity: 0.75;
         }
@@ -645,7 +563,7 @@
             margin-top: 34px;
         }
 
-        .button-3 a {
+        .button-3 button {
             margin-left: 45px;
             text-decoration: none;
             background-color: rgb(136 238 146 / 85%);
@@ -658,7 +576,7 @@
             color: white;
         }
 
-        .button-3 a:hover {
+        .button-3 button:hover {
             box-shadow: 5px 5px 8.5px rgb(43 80 43);
         }
 
@@ -666,7 +584,9 @@
             display: flex;
             flex-direction: column;
         }
+       
     </style>
+    
 </head>
 
 <body>
@@ -706,6 +626,18 @@
                 <a href="/contact" class="a1">Contact</a>
             </li>
         </ul>
+        <div class="input-group rounded">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
     </nav>
     <nav class="nav-2">
         <div class="main">Sprouts</div>
@@ -758,10 +690,11 @@
                         Let's Talk
                     </div>
                     <div class="contactform">
-                        <form onsubmit="sendmail()">
+                       
+                        <form action="https://formspree.io/f/xknlrrle" method="POST">
                             <div>
                                 <i class="fa fa-user icon"></i>
-                                <input type="text" placeholder="Name" id="details">
+                                <input for="email" type="text" placeholder="Name" id="details">
                             </div>
                             <div>
                                 <i class="fa fa-envelope icon"></i>
@@ -770,7 +703,7 @@
 
                             <div>
                                 <i class="fa fa-commenting icon" id="speclog"></i>
-                                <textarea placeholder="Any feedback or message for us" id="message"></textarea>
+                                <textarea placeholder="Any feedback or message for us" id="message" name="message"></textarea>
                             </div>
                             <div class="button-3">
                                 <button type="submit"> Send message</button>
@@ -787,6 +720,11 @@
 
         </div>
     </section>
+    <script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+crossorigin="anonymous"
+></script>
     <script>
         const btn = document.querySelector("#main");
         const btn2 = document.querySelector(".fa-angle-up");
@@ -812,24 +750,7 @@
             All rights are @reserved
         </div>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendmail(){
-        Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "info.vishalsoni2002@gmail.com",
-    Password : "A5570E2DDC3DFE89DA772089F4B66B9AD087",
-    To : 'vishal20gtc559@student.gangatechnicalcampus.com',
-    From : "info.vishalsoni2002@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);}
-
-
-
-    </script>
+    
 
 
 
